@@ -2,5 +2,6 @@ FROM node:16
 WORKDIR /usr/src/app/api
 EXPOSE 3080
 COPY package* ./
-COPY server* ./
+RUN npm install
+COPY . .
 CMD [ "npm", "run", "dev" ]
