@@ -1,0 +1,6 @@
+FROM node:16
+WORKDIR /usr/src/app/api
+EXPOSE 3080
+COPY package* ./
+COPY server* ./
+CMD [ "npm", "run", "dev" ]
